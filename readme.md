@@ -27,3 +27,8 @@
 
 
         ?>
+
+3. Make registration form and give authentic
+   Note--
+    -- If database auto incremet any will start from 0
+       ALTER TABLE userreg AUTO_INCREMENT=1
