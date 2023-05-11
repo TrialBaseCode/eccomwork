@@ -8,4 +8,4 @@
     <title>Document</title>
 </head>
 <body>
-    
+<?php include('include/navbar.php'); ?>
