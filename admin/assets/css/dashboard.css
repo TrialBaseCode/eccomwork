@@ -1,0 +1,35 @@
+.dashed-form-control{
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: #495057;
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 1px solid #d2d6da;
+    appearance: none;
+    border-radius: 0.375rem;
+    transition: 0.2s ease;
+}
+.upload_work input{
+    position: relative;
+}
+.upload_work input::file-selector-button {
+    visibility: hidden;
+    padding-left: 30px;
+}
+.upload_work input:before{
+    content: 'Choose Image';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: fit-content;
+    background-color: #d2d6da;
+    padding: 11px;
+    display: flex;
+    align-items: center;
+    color: #666161;
+}
