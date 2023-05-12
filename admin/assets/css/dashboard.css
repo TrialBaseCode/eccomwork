@@ -33,3 +33,7 @@
     align-items: center;
     color: #666161;
 }
+
+.cat_list .table> :not(caption)>*>* {
+    padding: 0.5rem 1.5rem;
+}
