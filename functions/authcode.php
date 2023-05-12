@@ -2,6 +2,7 @@
 
 session_start();
 include('../config/dbcon.php');
+include('myfunction.php');
 
 if (isset($_POST['register_btn'])) {
     $name = mysqli_real_escape_string($con, $_POST['name']);
@@ -60,18 +61,37 @@ if (isset($_POST['register_btn'])) {
     $userdata = mysqli_fetch_array($login_query_run);
     $username =   $userdata['name'];
     $useremail =   $userdata['email'];
+    
+    // for admin login
+    $role_as =   $userdata['role_as'];
+    /////
 
     $_SESSION['auth_user'] = [
         'name' => $username,
         'email' => $useremail  
     ];
+    
+     // for admin login
+    $_SESSION['role_as'] =     $role_as ;
 
-    $_SESSION['message'] = "Logged In Successfully";
-    header('Location: ../index.php');
+    if($role_as == 1)
+    { 
+    //    $_SESSION['message'] = "welcome to dashboard";
+    //    header('Location: ../admin/index.php');
+        redirect("../admin/index.php" , "welcome to dashboard");
+    } else {
+        // $_SESSION['message'] = "Logged In Successfully";
+        // header('Location: ../index.php');
+        redirect("../index.php" , "Logged In Successfully");
+    }
+     ////
+
+
 
    } else {
-     $_SESSION['message'] = "password or email is incorrect";
-     header('Location: ../login.php');
+    //  $_SESSION['message'] = "password or email is incorrect";
+    //  header('Location: ../login.php');
+     redirect("../login.php" , "password or email is incorrect");
    }
 
 }
