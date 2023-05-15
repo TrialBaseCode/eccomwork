@@ -32,9 +32,15 @@ include('../middleware/adminmiddleware.php');
                                     <tr>
                                         <td><?= $item["id"]; ?></td>
                                         <td><?= $item["name"]; ?></td>
-                                        <td><img src="../uploads/ <?= $item["name"]; ?>"  alt=""></td>
-                                        <td>1</td>
-                                        <td>@mdo</td>
+                                        <td>
+                                            <img src="../uploads/<?= $item["image"]; ?>"  alt="<?= $item["name"]; ?> width="200" height="100" " >
+                                        </td>
+                                        <td>
+                                            <?= $item['status'] == "0" ? "visible" : "hidden" ?>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-primary">Edit</a>
+                                        </td>
                                     </tr>
                             <?php
                                 }

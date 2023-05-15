@@ -29,7 +29,7 @@ include('../middleware/adminmiddleware.php');
                         <div class="col-md-12">
                             <div class="upload_work" >
                                 <label  for="example@image">Upload Image</label>
-                                <input type="file"  name="images"   class="dashed-form-control" id="example@image">
+                                <input type="file"  name="image"   class="dashed-form-control" id="example@image">
                             </div>
                         </div>
                         <div class="col-md-12">

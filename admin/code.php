@@ -11,30 +11,34 @@ if(isset($_POST['add_category_btn']))
     $meta_title = $_POST['meta_title'];
     $meta_description = $_POST['meta_description'];
     $meta_keywords = $_POST['meta_keywords'];
-    $status = $_POST['status']?'1':'0';
-    $popular = $_POST['popular']?'1':'0';
+    $status = isset($_POST['status'])?'1':'0';
+    $popular = isset($_POST['popular'])?'1':'0';
 
-    $image = $_FILES['images']['name'];
+    $image = $_FILES['image']['name'];
 
     $path = "../uploads";
 
     $image_ext = pathinfo($image, PATHINFO_EXTENSION);
-    $filename = time().'.'.$image_ext;
 
-    $cate_query= "INSERT INTO categories (name, slug,description,meta_title,meta_description,meta_keywords,status,popular,image)
-    VALUES('$name', '$slug', '$description',  '$meta_title', '$meta_description',  '$meta_keywords', '$status', '$popular',  '$image'  )";
+    $filename = time().'.'.$image_ext;
+    
+
+    $destination = $path.'/'.$filename;
+
+    $cate_query= "INSERT INTO categories 
+    (name,slug,description,meta_title,meta_description,meta_keywords,status,popular,image)
+    VALUES('$name', '$slug', '$description',  '$meta_title', '$meta_description',  '$meta_keywords', '$status', '$popular',  '$filename'  )";
      
      $cate_query_run = mysqli_query($con,  $cate_query);
 
-     if($cate_query_run)
-     {
-         move_uploaded_file($_FILES['image']['tmp_name'] , $path.'/'.$filename);
+        if($cate_query_run)
+        {
+         move_uploaded_file($_FILES['image']['tmp_name'], $destination );
          redirect("add-category.php", "Category Added Successfully");
 
         } else {
+
          redirect("add-category.php", "Something Went Wrong");
-     }
-
-
+     }  
 }
 ?>
