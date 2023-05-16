@@ -19,7 +19,7 @@ include('../middleware/adminmiddleware.php');
                                 <th scope="col">Name</th>
                                 <th scope="col">Images</th>
                                 <th scope="col">Status</th>
-                                <th scope="col">Edit</th>
+                                <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -30,16 +30,26 @@ include('../middleware/adminmiddleware.php');
                                 foreach ($category as $item) {
                             ?>
                                     <tr>
-                                        <td><?= $item["id"]; ?></td>
-                                        <td><?= $item["name"]; ?></td>
+                                        <td><div class="way"><?= $item["id"]; ?></div></td>
+                                        <td><div class="way"><?= $item["name"]; ?></div></td>
                                         <td>
-                                            <img src="../uploads/<?= $item["image"]; ?>"  alt="<?= $item["name"]; ?> width="200" height="100" " >
+                                           <div class="div_img">
+                                                <img src="../uploads/<?= $item["image"]; ?>"  alt="<?= $item["name"]; ?>  " >
+                                            </div>
                                         </td>
                                         <td>
-                                            <?= $item['status'] == "0" ? "visible" : "hidden" ?>
+                                            <div class="way">
+                                               <?= $item['status'] == "0" ? "visible" : "hidden" ?>
+                                            </div>
                                         </td>
                                         <td>
-                                            <a href="#" class="btn btn-primary">Edit</a>
+                                           <div class="way">
+                                              <a href="edit-category.php?id=<?= $item["id"]; ?>" class="btn btn-primary">Edit</a>
+                                              <form action="code.php" method="POST">
+                                                 <input type="hidden" name="category_id" value="<?= $item["id"]; ?>">
+                                                 <button type="submit" class="btn btn-danger" name="delete_category_btn">Delete</button>
+                                              </form>
+                                           </div>
                                         </td>
                                     </tr>
                             <?php

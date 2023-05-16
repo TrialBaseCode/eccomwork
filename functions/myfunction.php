@@ -8,6 +8,12 @@
      $query_run = mysqli_query($con, $query);
      return  $query_run;
   }
+  function getById($table , $id){
+   global $con;
+   $query = "SELECT * FROM $table WHERE id='$id'";
+   $query_run = mysqli_query($con, $query);
+   return  $query_run;
+}
   
   function redirect($url , $message)
   {

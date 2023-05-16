@@ -32,3 +32,8 @@
    Note--
     -- If database auto incremet any will start from 0
        ALTER TABLE userreg AUTO_INCREMENT=1
+
+4. The categories registration
+    ALTER TABLE categories AUTO_INCREMENT=1
+
+5. 
