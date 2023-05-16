@@ -37,3 +37,4 @@
     ALTER TABLE categories AUTO_INCREMENT=1
 
 5. 
+   ALTER TABLE products AUTO_INCREMENT=1

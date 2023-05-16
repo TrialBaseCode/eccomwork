@@ -2,6 +2,9 @@
 .connect{
     display: none;
 }
+.row{
+    align-items: center;
+}
 
 /* ------------------------------- */
 
