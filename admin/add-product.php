@@ -69,11 +69,11 @@ include('../middleware/adminmiddleware.php');
                                 </div>
                                 <div class="col-md-3">
                                     <label for="exam@status">Status</label>
-                                    <input type="checkbox" name="status" id="exam@status" required>
+                                    <input type="checkbox" name="status" id="exam@status" >
                                 </div>
                                 <div class="col-md-3">
                                     <label for="exam@populer">Trending</label>
-                                    <input type="checkbox" name="trending" id="exam@populer" required>
+                                    <input type="checkbox" name="trending" id="exam@populer" >
                                 </div>
                             </div>
                             <div class="col-md-12">
