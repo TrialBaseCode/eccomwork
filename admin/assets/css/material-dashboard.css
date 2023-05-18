@@ -23703,6 +23703,7 @@ hr.horizontal.gray-light {
   overflow-y: auto;
   padding: 0;
   box-shadow: none;
+  z-index: 1040;
 }
 
 .navbar-vertical.navbar-expand-xs .navbar-collapse {

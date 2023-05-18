@@ -22,9 +22,12 @@
 </footer>
   
 </main>
-<script src="../assets/js/core/bootstrap.bundle.min.js"></script>
-<script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
-<script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/core/bootstrap.bundle.min.js"></script>
+<script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
+<script src="assets/js/plugins/smooth-scrollbar.min.js"></script>
 <!--Alertify JavaScript -->
 <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 <script>
@@ -38,6 +41,7 @@
   } 
   ?>
 </script>
+
 
 </body>
 </html>

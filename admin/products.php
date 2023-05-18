@@ -6,8 +6,7 @@ include('../middleware/adminmiddleware.php');
 
 <div class="container-fluid py-4">
     <div class="row">
-        <div class="cpl-md-12">
-            <div class="card">
+       <div class="card" id="product_table">
                 <div class="card-header">
                     <h4>Products</h4>
                 </div>
@@ -56,7 +55,7 @@ include('../middleware/adminmiddleware.php');
                                             <div class="way">
                                                 <form action="code.php" method="POST">
                                                     <input type="hidden" name="product_id" value="<?= $item["id"]; ?>">
-                                                    <button type="submit" class="btn btn-danger" name="delete_product_btn">Delete</button>
+                                                    <button type="button" class="btn btn-danger delete_product_btn" value="<?= $item["id"]; ?>">Delete</button>
                                                 </form>
                                             </div>
                                         </td>
@@ -72,8 +71,7 @@ include('../middleware/adminmiddleware.php');
                     </table>
                 </div>
             </div>
-        </div>
-    </div>
+       </div>
 </div>
 
 <?php include('include/footer.php'); ?>

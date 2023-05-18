@@ -14,7 +14,7 @@ $con = mysqli_connect($host, $username , $password , $database);
 if (!$con) {
     die("Connection Failed");
 } else {
-    echo "<div class='connect'>connected success</div>";
+    // echo "<div class='connect'>connected success</div>";
 }
 
 

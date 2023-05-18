@@ -90,3 +90,16 @@
 .qtysp-change{
     align-items: flex-end;
 }
+
+
+
+/* delete prod */
+
+.sidenav.fixed-start+.main-content {
+    margin-left: 17.125rem;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    position: relative;
+    left: 0;
+}
