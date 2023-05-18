@@ -1,6 +1,10 @@
 <?php 
 include('include/header.php'); 
 include('../middleware/adminmiddleware.php');
+
+// echo substr($_SERVER['SCRIPT_NAME'] , strrpos($_SERVER['SCRIPT_NAME'] , "/") + 1);
+// echo strrpos($_SERVER['SCRIPT_NAME'] , "/");
+
 ?>
 
 
