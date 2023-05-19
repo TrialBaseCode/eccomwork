@@ -39,5 +39,4 @@
 5. 
    ALTER TABLE products AUTO_INCREMENT=1
 
-6.
-https://sweetalert2.github.io/#download  // for good ui alert
+6. https://sweetalert2.github.io/#download  // for good ui alert
