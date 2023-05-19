@@ -1,7 +1,4 @@
-<?php 
-session_start();
-include('include/header.php'); 
-?>
+<?php include('include/header.php'); ?>
 
 <?php
   if (isset($_SESSION['message'])) {
@@ -16,7 +13,7 @@ include('include/header.php');
 ?>
 <main>
     <div class="container">
-       <h4>Hello World</h4>
+       <h4>Hello World <i class="fa-solid fa-house"></i></h4>
     </div>
 </main>
 
