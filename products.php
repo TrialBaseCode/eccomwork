@@ -41,7 +41,7 @@ $category = mysqli_fetch_array($category_data);
                             foreach ($products as $item) {
                         ?>
                                 <div class="col-md-3">
-                                    <a href="javascript:void(0)" rel="noopener noreferrer" class="text-decoration-none">
+                                    <a href="product-view.php?product=<?= $item['slug']; ?>" rel="noopener noreferrer" class="text-decoration-none">
                                         <div class="card collection-card">
                                             <div class="card-body">
                                                 <div class="collection-card-image">

@@ -40,3 +40,19 @@
    ALTER TABLE products AUTO_INCREMENT=1
 
 6. https://sweetalert2.github.io/#download  // for good ui alert
+
+7.
+
+  $.ajax({
+        method: "POST",
+        url: "url",
+        data: "data",
+        dataType: "dataType",
+        success: function (response) {
+            
+        }
+     })
+
+     ## node see carefully of ajax if not need
+
+8.  ALTER TABLE carts AUTO_INCREMENT=1
