@@ -56,3 +56,5 @@
      ## node see carefully of ajax if not need
 
 8.  ALTER TABLE carts AUTO_INCREMENT=1
+
+9. https://erdplus.com/

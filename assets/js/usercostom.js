@@ -8,7 +8,7 @@ $(document).ready(function() {
       if(value < 10)
       {
         value++;
-        $('.input-qty').val(value);
+        $(this).closest(".product_data").find('.input-qty').val(value);
       }
     //   alert(qty);
   });
@@ -21,7 +21,7 @@ $(document).ready(function() {
     if(value > 1)
     {
       value--;
-      $('.input-qty').val(value);
+      $(this).closest(".product_data").find('.input-qty').val(value);
     }
   //   alert(qty);
   });

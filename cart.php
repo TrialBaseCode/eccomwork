@@ -52,9 +52,9 @@ include('functions/userfunction.php');
                                     </div>
                                     <div class="col-md-2">
                                         <div class="input-group myrangeinputtxt">
-                                            <span class="input-group-text decrement-btn">-</span>
+                                            <button class="input-group-text decrement-btn"  data-field="quantity">-</button>
                                             <input type="text" class="form-control text-center bg-white input-qty" value="<?= $citems['prod_qty'] ?>" disabled>
-                                            <span class="input-group-text increment-btn">+</span>
+                                            <button class="input-group-text increment-btn"  data-field="quantity">+</button>
                                         </div>
                                     </div>
                                     <div class="col-md-2">
