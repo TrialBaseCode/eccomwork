@@ -67,7 +67,35 @@ $(document).ready(function () {
       },
       success: function (response) {
         // alert(response);
+       
       },
     });
+  });
+
+  $(document).on('click','.deleteItem', function () {
+      var cart_id = $(this).val();
+      //  alert(cart_id);
+      $.ajax({
+        method: "POST",
+        url: "functions/handlecart.php",
+        data: {
+          cart_id: cart_id,
+          scope: "delete",
+        },
+        success: function (response) {
+          // alert(response);
+          if (response == 200) {
+            alertify.success("Items deleted succesfully");
+            setTimeout(() => {
+              location.reload();
+            }, 800);
+           
+          } else {
+            alertify.success(response);
+          }
+        },
+      });
+      
+
   });
 });
