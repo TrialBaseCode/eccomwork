@@ -44,9 +44,9 @@ if (isset($_GET['product'])) {
                     <div class="row">
                         <div class="col-md-4">
                             <div class="input-group mb-3 myrangeinputtxt" >
-                                <span class="input-group-text decrement-btn">-</span>
+                                <button class="input-group-text decrement-btn">-</button>
                                 <input type="text" class="form-control text-center bg-white input-qty" value="1" disabled aria-label="Amount (to the nearest dollar)">
-                                <span class="input-group-text increment-btn">+</span>
+                                <button class="input-group-text increment-btn">+</button>
                             </div>
                         </div>
                     </div>

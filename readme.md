@@ -58,3 +58,5 @@
 8.  ALTER TABLE carts AUTO_INCREMENT=1
 
 9. https://erdplus.com/
+
+10.  $(this).closest(".product_data").find('.input-qty').val(value);

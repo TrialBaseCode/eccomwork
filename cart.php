@@ -1,6 +1,7 @@
 <?php
 include('include/header.php');
 include('functions/userfunction.php');
+include('authenticate.php');
 ?>
 
 <div class="py-3 bg-primary breadcrumb">
@@ -51,10 +52,11 @@ include('functions/userfunction.php');
                                         <h5><span>Rs </span><?= $citems['selling_price'] ?></h5>
                                     </div>
                                     <div class="col-md-2">
+                                        <input type="hidden" class="prodId" value="<?= $citems['prod_id'] ?>">
                                         <div class="input-group myrangeinputtxt">
-                                            <button class="input-group-text decrement-btn"  data-field="quantity">-</button>
+                                            <button class="input-group-text decrement-btn updateQty"  data-field="quantity">-</button>
                                             <input type="text" class="form-control text-center bg-white input-qty" value="<?= $citems['prod_qty'] ?>" disabled>
-                                            <button class="input-group-text increment-btn"  data-field="quantity">+</button>
+                                            <button class="input-group-text increment-btn  updateQty"  data-field="quantity">+</button>
                                         </div>
                                     </div>
                                     <div class="col-md-2">
