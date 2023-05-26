@@ -69,6 +69,9 @@ if (isset($_SESSION['auth'])) {
                 $insert_items_query_run = mysqli_query($con, $insert_items_query);
             }
           
+            $deleteCartQuery = "DELETE FROM carts WHERE user_id='$userId'";
+            $deleteCartQuery_run = mysqli_query($con,  $deleteCartQuery);
+            
 
             $_SESSION['message'] = "Order Placed Succesfully";
             header('Location: ../my-orders.php');
