@@ -67,11 +67,23 @@ if (isset($_SESSION['auth'])) {
 
                 $insert_items_query = "INSERT INTO order_items (order_id, prod_id, qty, price) VALUES ('$order_id', '$prod_id', '$prod_qty ', '$price' ) ";
                 $insert_items_query_run = mysqli_query($con, $insert_items_query);
+                
+
+                $product_query = "SELECT * FROM products WHERE id='$prod_id' LIMIT 1";
+                $product_query_run = mysqli_query($con,  $product_query);
+            
+                $productData = mysqli_fetch_array($product_query_run);
+                $current_qty = $productData['qty'];
+
+                $new_qty = $current_qty - $prod_qty;
+
+                $updateQty_query = "UPDATE products SET qty='$new_qty' WHERE id='$prod_id' ";
+                $updateQty_query_run = mysqli_query($con, $updateQty_query);
             }
           
             $deleteCartQuery = "DELETE FROM carts WHERE user_id='$userId'";
             $deleteCartQuery_run = mysqli_query($con,  $deleteCartQuery);
-            
+
 
             $_SESSION['message'] = "Order Placed Succesfully";
             header('Location: ../my-orders.php');

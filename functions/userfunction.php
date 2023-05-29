@@ -45,6 +45,14 @@
 
     }
  
+    function getOrders() {
+      global $con;
+      $userId=   $_SESSION['auth_user']['user_id'];
+
+      $query = "SELECT * FROM orders WHERE user_id=' $userId' ORDER BY id DESC";
+      return $query_run = mysqli_query($con, $query);
+
+    }
    function redirect($url , $message)
    {
       $_SESSION['message'] = $message;
