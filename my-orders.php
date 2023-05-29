@@ -46,7 +46,7 @@ include('authenticate.php');
                                                <td><?= $item['total_price']; ?></td>
                                                <td><?= $item['created_at']; ?></td>
                                                <td>
-                                                  <a href="view-order.php" class="btn btn-primary">View details</a>
+                                                  <a href="view-order.php?t=<?= $item['tracking_no']; ?>" class="btn btn-primary">View details</a>
                                                </td>
                                            </tr>
                                         <?php
