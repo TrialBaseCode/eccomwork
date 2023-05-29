@@ -76,3 +76,16 @@
 .myrangeinputtxt{
     width: 130px;
 }
+
+/*-- slider-- */
+
+.myslidercourasol .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: calc(100vh - 56px);
+}
+.e-shop-list a{
+    text-decoration: none;
+    color: #fff;
+}
