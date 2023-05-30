@@ -3,7 +3,7 @@ if(isset($_SESSION['auth']))
 {
     $_SESSION['message'] = "You are already logged In";
     header('Location:index.php');
-    exit();
+    exit(0);
 }
 
 include('include/header.php'); 

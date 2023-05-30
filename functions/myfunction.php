@@ -15,13 +15,21 @@
    $query_run = mysqli_query($con, $query);
    return  $query_run;
   }
-
+  
+  function getAllOrders(){
+   global $con;
+   $query = "SELECT * FROM orders WHERE status='0' ";
+   $query_run = mysqli_query($con, $query);
+   return  $query_run;
+  }
 
   function redirect($url , $message)
   {
      $_SESSION['message'] = $message;
      header('Location:' .$url);
-     exit();
+     exit(0);
   }
+
+ 
 
 ?>
