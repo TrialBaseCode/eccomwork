@@ -12,8 +12,8 @@ include('../middleware/adminmiddleware.php');
                 <div class="container">
                     <div class="card card-body shadow">
                         <div class="card-header bg-primary">
-                            <h4 class="text-white">Orders
-                                <a href="order-history.php" class="btn btn-warning float-end">Order History</a>
+                            <h4 class="text-white">Order History
+                                <a href="orders.php" class="btn btn-warning float-end">Back</a>
                             </h4>
                         </div>
                         <div class="row">
@@ -31,7 +31,7 @@ include('../middleware/adminmiddleware.php');
                                     </thead>
                                     <tbody>
                                         <?php
-                                        $orders =  getAllOrders();
+                                        $orders =  getOrderHistory();
 
                                         if (mysqli_num_rows($orders) > 0) {
                                             foreach ($orders as $item) {
