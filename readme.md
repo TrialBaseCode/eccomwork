@@ -60,3 +60,5 @@
 9. https://erdplus.com/
 
 10.  $(this).closest(".product_data").find('.input-qty').val(value);
+
+11. See database phpcomm.sql
