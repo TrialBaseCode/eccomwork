@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 03, 2023 at 07:30 AM
+-- Generation Time: Jul 28, 2023 at 01:11 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -40,9 +40,8 @@ CREATE TABLE `carts` (
 --
 
 INSERT INTO `carts` (`id`, `user_id`, `prod_id`, `prod_qty`, `created_as`) VALUES
-(10, 1, 2, 2, '2023-06-01 11:43:27'),
-(11, 1, 3, 2, '2023-06-01 11:43:30'),
-(12, 1, 4, 4, '2023-06-01 11:43:34');
+(13, 2, 2, 1, '2023-07-28 11:05:58'),
+(14, 2, 3, 1, '2023-07-28 11:06:03');
 
 -- --------------------------------------------------------
 
@@ -103,7 +102,8 @@ CREATE TABLE `orders` (
 INSERT INTO `orders` (`id`, `tracking_no`, `user_id`, `name`, `email`, `phone`, `address`, `pincode`, `total_price`, `payment_mode`, `payment_id`, `status`, `comments`, `created_at`) VALUES
 (1, 'Sharmacoder249067895689', 1, 'sonali', 'anu12@gmail.com', '4567895689', 'srdgffw wrgwrgwr', 751002, 4700, 'COD', '', 1, NULL, '2023-05-30 10:49:17'),
 (2, 'Sharmacoder161767895689', 1, 'rimali', 'sikha@gmail.com', '4567895689', 'dwrgfwe wertwetf', 751002, 4700, 'COD', '', 0, NULL, '2023-05-30 10:49:49'),
-(3, 'Sharmacoder199867895689', 1, 'sonali', 'anu12@gmail.com', '4567895689', 'gyertge r gwrgwr', 751002, 16700, 'COD', '', 0, NULL, '2023-06-01 11:01:15');
+(3, 'Sharmacoder199867895689', 1, 'sonali', 'anu12@gmail.com', '4567895689', 'gyertge r gwrgwr', 751002, 16700, 'COD', '', 0, NULL, '2023-06-01 11:01:15'),
+(4, 'Sharmacoder729794562356', 1, 'manish', 'anu12@gmail.com', '7894562356', 'ryfjyrj turtsurtu rtrte5u', 751003, 2700, 'COD', '', 0, NULL, '2023-07-28 11:09:57');
 
 -- --------------------------------------------------------
 
@@ -133,7 +133,8 @@ INSERT INTO `order_items` (`id`, `order_id`, `prod_id`, `qty`, `price`, `created
 (6, 2, 2, 1, 900, '2023-05-30 10:49:49'),
 (7, 3, 4, 5, 3000, '2023-06-01 11:01:15'),
 (8, 3, 3, 1, 800, '2023-06-01 11:01:15'),
-(9, 3, 2, 1, 900, '2023-06-01 11:01:15');
+(9, 3, 2, 1, 900, '2023-06-01 11:01:15'),
+(10, 4, 2, 3, 900, '2023-07-28 11:09:57');
 
 -- --------------------------------------------------------
 
@@ -166,7 +167,7 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (`id`, `category_id`, `name`, `slug`, `small_description`, `description`, `original_price`, `selling_price`, `image`, `qty`, `status`, `trending`, `meta_title`, `meta_keywords`, `meta_description`, `created_at`) VALUES
 (1, 0, 'oneplus', 'oneplus', 'The OnePlus One was introduced on 23 April 2014', 'The OnePlus One was introduced on 23 April 2014', 500, 400, '1685359557.jpg', 0, 1, 1, 'Many people use their smartwatches', 'Many people use their smartwatches', 'The OnePlus One was introduced on 23 April 2014', '2023-05-29 11:25:57'),
-(2, 1, 'samsumg', 'samsung', 'best phone no', 'best phone no', 1000, 900, '1685359792.jpg', -3, 0, 1, 'Elevate your summer wardrobe', 'Elevate your summer wardrobe', 'best phone no', '2023-05-29 11:29:52'),
+(2, 1, 'samsumg', 'samsung', 'best phone no', 'best phone no', 1000, 900, '1685359792.jpg', -6, 0, 1, 'Elevate your summer wardrobe', 'Elevate your summer wardrobe', 'best phone no', '2023-05-29 11:29:52'),
 (3, 1, 'Samsung Galaxy S23', 'SamsungGalaxy', 'Samsung, South Korean company ', 'Samsung, South Korean company', 1000, 800, '1685359960.jpg', -3, 0, 1, 'Many people use their smartwatches', 'Samsung, South Korean company', 'Samsung, South Korean company', '2023-05-29 11:32:40'),
 (4, 1, 'realme', 'realme', 'realme officially entered Europe', 'realme officially entered Europe', 4000, 3000, '1685360029.jpg', -7, 0, 1, ' digital media devices', 'realme officially entered Europe', 'realme officially entered Europe', '2023-05-29 11:33:49');
 
@@ -242,7 +243,7 @@ ALTER TABLE `userreg`
 -- AUTO_INCREMENT for table `carts`
 --
 ALTER TABLE `carts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -254,13 +255,13 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `order_items`
 --
 ALTER TABLE `order_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `products`
